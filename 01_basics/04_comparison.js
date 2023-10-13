@@ -12,7 +12,7 @@ console.log("02" > 1);
 console.log(null > 0);
 console.log(null == 0);
 console.log(null >= 0);
-
+// equality check ==  and comparison < > <= >=  >< handle differently  comparison covert null to a number 0 
 
 console.log(undefined == 0);
 console.log(undefined > 0);
