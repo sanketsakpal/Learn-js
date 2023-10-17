@@ -6,4 +6,36 @@ if (true) {
 }
 // console.log(a);
 // console.log(b);
-console.log(c);
+// console.log(c);
+
+
+function one (){
+
+user = "sanket";
+
+function two(){ 
+    const website ="youtube";
+    console.log(user);
+}
+
+// console.log(website);
+two()
+
+}
+one();
+
+// ++++++++++++++++++ interesting ++++++++++++++++++
+
+hoisting 
+console.log(addone(5))
+
+function addone(num){
+    return num + 1
+}
+
+
+
+addTwo(5)
+const addTwo = function(num){
+    return num + 2
+}
