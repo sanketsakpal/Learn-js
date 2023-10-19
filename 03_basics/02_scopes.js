@@ -26,7 +26,10 @@ one();
 
 // ++++++++++++++++++ interesting ++++++++++++++++++
 
-hoisting 
+// hoisting 
+
+// Hoisting is when the JavaScript interpreter moves all variable and function declarations to the top of the current scope
+
 console.log(addone(5))
 
 function addone(num){
