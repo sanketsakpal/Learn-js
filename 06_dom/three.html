@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body style="background-color: black; color: #fff;">
+   
+</body>
+
+
+<script>
+ const div = document.createElement('div');
+ div.className = 'main';
+ div.id = Math.random();
+ div.setAttribute("title", "generated title") // direct set value save one round of trip on browser 
+ div.style.backgroundColor = "green";
+const addText = document.createTextNode("code js");
+div.appendChild(addText);
+document.body.appendChild(div);
+</script>
+</html>
