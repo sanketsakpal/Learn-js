@@ -1,34 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body>
-    
 
-<h1>
-    Test 
-</h1>
-<button id="start">Start</button>
-<button id="stop">Stop</button>
+<body>
+
+
+    <h1>
+        Test
+    </h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
 </body>
 <script>
-const sayDate = function (){
-console.log("testing",Date.now())
-}
-const intervalId = setInterval(sayDate,1000)
-document.querySelector('#stop').addEventListener('click' , ()=>{
-    clearInterval(intervalId);
-    console.log('stop');
-} )
+    const sayDate = function () {
+        console.log("testing", Date.now())
+    }
+   
 
-document.querySelector('#start').addEventListener('click' , ()=>{
+   let  intervalId
+    const callInterval = () => {
+         intervalId = setInterval(sayDate, 1000)
+    }
+    callInterval();
+    document.querySelector('#stop').addEventListener('click', () => {
+        clearInterval(intervalId);
+        document.getElementById("stop").disabled = true;
+        document.getElementById("start").disabled = false;
+        console.log('stop');
+    });
 
-    setInterval(sayDate,1000)
-    console.log('start');
-} )
+    document.querySelector('#start').addEventListener('click', () => {
+        callInterval();
+        document.getElementById("start").disabled = true;
+        document.getElementById("stop").disabled = false;
+        console.log('start');
+    });
 </script>
+
 </html>
