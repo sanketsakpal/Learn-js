@@ -6,6 +6,8 @@ this.username = username
     logMe(){
         console.log(`UserName ${this.username}`);
     }
+
+    // use static keyword to prevent from use of some features or methods 
   static  createId(){
         return `123`;
     }
